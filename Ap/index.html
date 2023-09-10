@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>    Hackathone Attendance Portal</title>
+    <link rel="stylesheet" href="./Ap/style.css">
+</head>
+<body>
+    <header>
+        <h1>Attendance Portal</h1>
+    </header>
+    <div id="main-content">
+        <h2>Admin Panel</h2>
+        
+        <a href="./Ap/login.html"><button id="logout">Log out</button></a>
+        <!-- Form to Add Class Details -->
+        <form id="class-form">
+            <h3>Add Class Details:</h3>
+            <label for="class-course">Class Course:</label>
+            <input type="text" class="form" id="class-course" required>
+            <label for="class-time">Class Time:</label>
+            <input type="text" class="form"id="class-time" required>
+            <label for="class-schedule">Class Schedule:</label>
+            <input type="text" class="form"id="class-schedule" required>
+            <label for="class-teacher">Class Teacher:</label>
+            <input type="text" class="form" id="class-teacher" required>
+            <label for="class-section">Class Section:</label>
+            <input type="text"class="form" id="class-section" required>
+            <label for="class-batch">Class Batch:</label>
+            <input type="text"class="form" id="class-batch" required>
+
+
+
+
+
+            <!-- Add more input fields as needed -->
+            <button type="submit">Add Class</button>
+        </form>
+
+        <!-- Form to Add Student Details -->
+        <form id="student-form">
+            <h3>Add Student Details:</h3>
+            <label for="student-name">Student Name:</label>
+            <input type="text" id="student-name" required>
+            <label for="student-roll">Roll Number:</label>
+            <input type="text" id="student-roll" required>
+            <!-- Add more input fields as needed -->
+            <button type="submit">Add Student</button>
+        </form>
+
+        <!-- Form to Mark Attendance -->
+        <form id="attendance-form">
+            <h3>Mark Attendance:</h3>
+            <label for="class-dropdown">Select Class:</label>
+            <select id="class-dropdown">
+                <!-- Populate this dropdown with class names -->
+            </select>
+            <label for="roll-number">Enter Roll Number:</label>
+            <input type="text" id="roll-number" required>
+            <label for="attendance-status">Select Status:</label>
+            <select id="attendance-status">
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+                <option value="Late">Late</option>
+                <option value="Leave">Leave</option>
+            </select>
+            <button type="submit">Submit Attendance</button>
+        </form>
+
+        <!-- Display Student Statistics -->
+        <h3>Student Statistics:</h3>
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Roll Number</th>
+                    <th>Attendance Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populate this table with student data -->
+            </tbody>
+        </table>
+    </div>
+    <!-- <script type="module" src="./app.js"></script> -->
+    <script type="module" src="./Ap/app.js"></script>
+</body>
+</html>
